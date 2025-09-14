@@ -1,0 +1,11 @@
+body { font-family: system-ui, sans-serif; margin: 24px; }
+h1 { margin-bottom: 16px; }
+.btn { padding: 8px 12px; border: 1px solid #444; text-decoration: none; display: inline-block; border-radius: 6px; }
+.btn + .btn { margin-left: 8px; }
+.btn-secondary { background: #f1f1f1; }
+.btn-danger { background: #ffe5e5; border-color: #cc0000; color: #cc0000; }
+table { border-collapse: collapse; width: 100%; margin-top: 16px; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+label { display:block; margin: 8px 0; }
+input { padding: 6px; width: 320px; }
+.actions { margin-top: 12px; }

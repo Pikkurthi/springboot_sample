@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8"/>
+  <title th:text="${title}">Employee</title>
+  <link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+<body>
+<header><h1 th:text="${title}">Employee</h1></header>
+<main>
+  <form th:action="${id} == null ? @{/employees} : @{'/employees/' + ${id}}" method="post" th:object="${employee}">
+    <label>Name <input type="text" th:field="*{name}" required maxlength="120"></label>
+    <label>Email <input type="email" th:field="*{email}" required maxlength="180"></label>
+    <label>Salary <input type="number" step="0.01" min="0" th:field="*{salary}" required></label>
+    <div class="actions">
+      <button class="btn" type="submit">Save</button>
+      <a class="btn btn-secondary" th:href="@{/employees}">Cancel</a>
+    </div>
+  </form>
+</main>
+</body>
+</html>
